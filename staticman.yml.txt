@@ -1,0 +1,14 @@
+comments:
+  allowedFields: ["name", "email", "url", "message"]
+  requiredFields: ["name", "message"]
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
+  branch: "main"
+  commitMessage: "New comment by {fields.name}"
+  path: "https://github.com/gejrfa/comment/{options.slug}"
+  filename: "comment-{@timestamp}"
+  format: "yaml"
+  moderation: true
