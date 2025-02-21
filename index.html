@@ -3,6 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Page</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur ma page</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Titre de l'article</h2>
+            <p>Contenu de votre article ou page ici...</p>
+        </article>
+
+        <!-- Section des commentaires -->
+        <section id="comments">
+            <h2>Laisser un commentaire</h2>
+            <form method="POST" action="https://api.staticman.net/v3/entry/github/<votre-utilisateur>/<votre-depot>/<branche>/comments">
+                <input type="hidden" name="options[slug]" value="{{ page.slug }}">
+                <input type="text" name="fields[name]" placeholder="Nom" required>
+                <input type="email" name="fields[email]" placeholder="Email">
+                <input type="url" name="fields[url]" placeholder="Site Web">
+                <textarea name="fields[message]" placeholder="Message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Footer de votre page</p>
+    </footer>
+</body>
+</html>
+
+<!-- NON EXECUTE
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page de Commentaires</title>
 <style>
         body {
@@ -36,4 +75,4 @@
     </script>
 </body>
 </html>
-
+-->
