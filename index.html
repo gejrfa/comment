@@ -1,23 +1,41 @@
-<!-- NON EXECUTE
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votre Page</title>
+    <title>Page de Commentaires</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #comments {
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur ma page</h1>
+        <h1>Bienvenue sur la page de commentaires STATICMAN</h1>
     </header>
 
     <main>
         <article>
-            <h2>Titre de l'article</h2>
-            <p>Contenu de votre article ou page ici...</p>
+            <h2>Présentation de la page</h2>
+            <p>Cette page utilise Staticman ...</p>
         </article>
 
-        <!-- Section des commentaires
+        <!-- Section des commentaires -->
         <section id="comments">
             <h2>Laisser un commentaire</h2>
             <form method="POST" action="https://api.staticman.net/v3/entry/github/gejrfa/comment/main/comments">
@@ -36,8 +54,8 @@
     </footer>
 </body>
 </html>
--->
 
+<!-- NON EXECUTE
 <!DOCTYPE html>
 <html lang="fr">
 <head>
