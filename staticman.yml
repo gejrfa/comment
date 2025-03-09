@@ -9,6 +9,6 @@ comments:
   branch: "main"
   commitMessage: "New comment by {fields.name}"
   path: "_data/comments/{options.slug}"
-  filename: "comment-{@timestamp}"
+  filename: "comment-{fields.name}-{@timestamp}"
   format: "yaml"
   moderation: true
