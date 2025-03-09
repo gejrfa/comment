@@ -8,7 +8,7 @@ comments:
         format: "timestamp-seconds"
   branch: "main"
   commitMessage: "New comment by {fields.name}"
-  path: "https://github.com/gejrfa/comment/{options.slug}"
+  path: "_data/comments/{options.slug}"
   filename: "comment-{@timestamp}"
   format: "yaml"
   moderation: true
