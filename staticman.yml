@@ -12,3 +12,4 @@ comments:
   filename: "comment-{fields.name}-{@timestamp}"
   format: "yaml"
   moderation: true
+  
