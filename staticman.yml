@@ -1,6 +1,12 @@
 comments:
-  allowedFields: ["name", "email", "url", "message"]
-  requiredFields: ["name", "message"]
+  allowedFields:
+    - name
+    - email
+    - url
+    - message
+  requiredFields:
+    - name
+    - message
   generatedFields:
     date:
       type: date
