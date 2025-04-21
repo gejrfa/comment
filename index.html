@@ -1,3 +1,5 @@
+<!-- pour mettre SI BESOIN en commentaire NON EXECUTE
+-->
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -26,94 +28,7 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenue sur la page de commentaires STATICMAN01 16/03 - powered by Glitch</h1>
-    </header>
-
-    <main>
-        <article>
-            <h2>Présentation de la page</h2>
-            <p>Cette page utilise Staticman ...</p>
-        </article>
-
-        <!-- Section des commentaires -->
-        <section id="comments">
-            <h2>Laisser un commentaire</h2>
-            <form id="comment-form" method="POST" action="https://api.staticman.net/v3/entry/github/gejrfa/comment/main/comments">
-                <input type="hidden" name="options[slug]" value="{{ page.slug }}">
-                <input type="text" name="fields[name]" placeholder="Nom" required>
-                <input type="email" name="fields[email]" placeholder="Email">
-                <input type="url" name="fields[url]" placeholder="Site Web">
-                <textarea name="fields[message]" placeholder="Message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-            <div id="form-messages"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Footer de votre page</p>
-    </footer>
-    <!-- Script JavaScript à la fin du body -->
-    <script>
-        document.getElementById('comment-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Empêche la soumission traditionnelle du formulaire
-
-            const form = event.target;
-            const formData = new FormData(form);
-            const formMessages = document.getElementById('form-messages');
-
-            fetch(form.action, {
-                method: form.method,
-                body: formData,
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    formMessages.innerHTML = '<p>Merci pour votre commentaire ! Il sera visible après modération.</p>';
-                    form.reset(); // Réinitialise le formulaire
-                } else {
-                    formMessages.innerHTML = '<p>Il y a eu une erreur lors de la soumission de votre commentaire. Veuillez réessayer.</p>';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                formMessages.innerHTML = '<p>Il y a eu une erreur lors de la soumission de votre commentaire. Veuillez réessayer.</p>';
-            });
-        });
-    </script>
-</body>
-</html>
-
-<!-- NON EXECUTE
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Commentaires</title>
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        #comments {
-            width: 100%;
-            max-width: 600px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Bienvenue sur la page de commentaires !</h1>
+    <h1>Bienvenue sur la page de commentaires de notre site GEJR !</h1>
     <div id="comments"></div>
     <script src="https://utteranc.es/client.js"
         repo="gejrfa/comment"
@@ -124,5 +39,5 @@
     </script>
 </body>
 </html>
--->
+
 
