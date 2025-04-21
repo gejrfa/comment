@@ -6,10 +6,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page avec défilement fluide</title>
+    <title>Page avec ascenseur vertical</title>
     <style>
-        html {
-            scroll-behavior: smooth;
+        #backToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
         }
     </style>
     <title>Page de Commentaires</title>
@@ -34,6 +43,7 @@
     </style>
 </head>
 <body>
+    <button id="backToTopBtn">Haut</button>
     <h1>Bienvenue sur la page de commentaires de notre site GEJR !</h1>
     <h1>Tous les commentaires feront l'objet d'une analyse circonstanciée par notre CQFD </h1>
     <h1>Signé : la Commission Qualité Fonction et Développement </h1>
@@ -44,6 +54,24 @@
         theme="github-light"
         crossorigin="anonymous"
         async>
+    </script>
+    <script>
+        // Afficher le bouton lorsque l'utilisateur fait défiler la page vers le bas de 20px
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
+
+        // Faire défiler la page vers le haut lorsque l'utilisateur clique sur le bouton
+        document.getElementById("backToTopBtn").addEventListener("click", function() {
+            document.body.scrollTop = 0; // Pour Safari
+            document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
+        });
     </script>
 </body>
 </html>
